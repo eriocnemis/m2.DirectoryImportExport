@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Eriocnemis, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- region import config -->
+    <type name="Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\CompositeValidator\AppendValidator">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="country" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Country</item>
+                <item name="code" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Code</item>
+                <item name="locale" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Locale</item>
+                <item name="name" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Name</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\CompositeValidator\DeleteValidator">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="country" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Country</item>
+                <item name="code" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Code</item>
+                <item name="primary" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Primary</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\CompositeValidator\ReplaceValidator">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="country" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Country</item>
+                <item name="code" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Code</item>
+                <item name="primary" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Primary</item>
+                <item name="locale" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Locale</item>
+                <item name="name" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Name</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="DirectoryImportExportRegionValidatorPool" type="Eriocnemis\DirectoryImportExport\Model\Import\Validator\ValidatorPool">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="append" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\CompositeValidator\AppendValidator\Proxy</item>
+                <item name="delete" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\CompositeValidator\DeleteValidator\Proxy</item>
+                <item name="replace" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\CompositeValidator\ReplaceValidator\Proxy</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="DirectoryImportExportRegionHandlerPool" type="Eriocnemis\DirectoryImportExport\Model\Import\Handler\HandlerPool">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="append" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Handler\AppendHandler\Proxy</item>
+                <item name="delete" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Handler\DeleteHandler\Proxy</item>
+                <item name="replace" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Handler\ReplaceHandler\Proxy</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Eriocnemis\DirectoryImportExport\Model\Import\Region">
+        <arguments>
+            <argument name="validatorPool" xsi:type="object">DirectoryImportExportRegionValidatorPool</argument>
+            <argument name="handlerPool" xsi:type="object">DirectoryImportExportRegionHandlerPool</argument>
+        </arguments>
+    </type>
+        <type name="Magento\ImportExport\Model\Import\SampleFileProvider">
+        <arguments>
+            <argument name="samples" xsi:type="array">
+                <item name="directory_region" xsi:type="string">Eriocnemis_DirectoryImportExport</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
