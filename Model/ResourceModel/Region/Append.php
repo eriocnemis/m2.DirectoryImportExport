@@ -38,11 +38,16 @@ class Append extends AbstractResource
      */
     protected function getRegionBind(array $rowData)
     {
-        return [
+        $data = [
             'country_id' => $rowData[Field::COUNTRY_ID],
             'code' => $rowData[Field::CODE],
             'default_name' => $rowData[Field::NAME]
         ];
+
+        if (isset($rowData[Field::STATUS])) {
+            $data['status'] = (int)$rowData[Field::STATUS];
+        }
+        return $data;
     }
 
     /**

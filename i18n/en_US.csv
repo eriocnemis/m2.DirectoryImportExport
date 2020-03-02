@@ -7,3 +7,4 @@
 "Region name field is empty.","Region name field is empty."
 "Region name exceeded max length.","Region name exceeded max length."
 "Region with specified code and specified country not found.","Region with specified code and specified country not found."
+"Invalid value of %1 provided for the region status field.","Invalid value of %1 provided for the region status field."

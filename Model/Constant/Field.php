@@ -29,4 +29,9 @@ class Field
      * CountryId field key
      */
     const COUNTRY_ID = 'country_id';
+
+    /**
+     * Status field key
+     */
+    const STATUS = 'status';
 }

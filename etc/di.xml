@@ -15,6 +15,7 @@
                 <item name="code" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Code</item>
                 <item name="locale" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Locale</item>
                 <item name="name" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Name</item>
+                <item name="status" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Status</item>
             </argument>
         </arguments>
     </type>
@@ -35,6 +36,7 @@
                 <item name="primary" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Primary</item>
                 <item name="locale" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Locale</item>
                 <item name="name" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Name</item>
+                <item name="status" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator\Status</item>
             </argument>
         </arguments>
     </type>
