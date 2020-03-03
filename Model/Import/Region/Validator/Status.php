@@ -15,11 +15,11 @@ use Eriocnemis\DirectoryImportExport\Model\Import\Validator\ValidatorInterface;
 class Status implements ValidatorInterface
 {
     /**
-     * Status source
+     * Status options
      *
-     * @var StatusSource
+     * @var string[]
      */
-    protected $statusSource;
+    protected $options;
 
     /**
      * Initialize validator
@@ -29,7 +29,7 @@ class Status implements ValidatorInterface
     public function __construct(
         StatusSource $statusSource
     ) {
-        $this->statusSource = $statusSource;
+        $this->options = $statusSource->toArray();
     }
 
     /**
@@ -53,8 +53,7 @@ class Status implements ValidatorInterface
      */
     protected function validateAllow($status)
     {
-        $options = $this->statusSource->toArray();
-        if (!isset($options[$status])) {
+        if (!isset($this->options[$status])) {
             return [
                 __('Invalid value of %1 provided for the region status field.', $status)
             ];
