@@ -30,6 +30,9 @@ Extension version | [2.0.1](https://github.com/eriocnemis/m2.DirectoryImportExpo
 
 ## Usage
 
+### Region Import Page
+
+<img alt="Magento2 DirectoryImportExport" src="http://eriocnemis.com/image/m2/directory-import-export/import.region.png" style="width:100%"/>
 
 ## Uninstall
 
