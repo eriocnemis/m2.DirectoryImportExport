@@ -64,7 +64,7 @@
             <argument name="handlerPool" xsi:type="object">DirectoryImportExportRegionHandlerPool</argument>
         </arguments>
     </type>
-        <type name="Magento\ImportExport\Model\Import\SampleFileProvider">
+    <type name="Magento\ImportExport\Model\Import\SampleFileProvider">
         <arguments>
             <argument name="samples" xsi:type="array">
                 <item name="directory_region" xsi:type="string">Eriocnemis_DirectoryImportExport</item>
