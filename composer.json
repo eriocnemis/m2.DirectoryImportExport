@@ -1,0 +1,27 @@
+{
+    "name": "eriocnemis/module-directory-import-export",
+    "description": "The extension allows admin to import regions.",
+    "type": "magento2-module",
+    "version": "2.0.1",
+    "authors": [{
+        "name": "Eriocnemis Team",
+        "email": "dev.eriocnemis@gmail.com"
+    }],
+    "license": [
+        "OSL-3.0"
+    ],
+    "require": {
+        "magento/framework": "100.0.*",
+        "magento/module-directory": "100.0.*",
+        "magento/module-import-export": "100.0.*",
+        "eriocnemis/module-directory": "2.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Eriocnemis\\DirectoryImportExport\\": ""
+        }
+    }
+}
