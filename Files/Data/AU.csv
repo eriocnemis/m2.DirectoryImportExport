@@ -1,0 +1,17 @@
+country_id,code,locale,name
+AU,ACT,en_US,Australian Capital Territory
+AU,NSW,en_US,New South Wales
+AU,VIC,en_US,Victoria
+AU,QLD,en_US,Queensland
+AU,SA,en_US,South Australia
+AU,TAS,en_US,Tasmania
+AU,WA,en_US,Western Australia
+AU,NT,en_US,Northern Territory
+AU,ACT,en_AU,Australian Capital Territory
+AU,NSW,en_AU,New South Wales
+AU,VIC,en_AU,Victoria
+AU,QLD,en_AU,Queensland
+AU,SA,en_AU,South Australia
+AU,TAS,en_AU,Tasmania
+AU,WA,en_AU,Western Australia
+AU,NT,en_AU,Northern Territory
