@@ -71,4 +71,36 @@
             </argument>
         </arguments>
     </type>
+    <!-- region export config -->
+    <type name="Eriocnemis\DirectoryImportExport\Model\Export\Region">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="attribute_collection" xsi:type="object">Eriocnemis\DirectoryImportExport\Model\Export\Region\Attribute\Collection</item>
+            </argument>
+            <argument name="attributeConfig" xsi:type="array">
+                <item name="country_id" xsi:type="array">
+                    <item name="frontend_label" xsi:type="string">Country</item>
+                    <item name="backend_type" xsi:type="string">varchar</item>
+                    <item name="frontend_input" xsi:type="string">text</item>
+                    <item name="source_model" xsi:type="string">Eriocnemis\DirectoryImportExport\Model\Export\Region\Attribute\Source\Country</item>
+                </item>
+                <item name="locale" xsi:type="array">
+                    <item name="frontend_label" xsi:type="string">Locale</item>
+                    <item name="backend_type" xsi:type="string">varchar</item>
+                    <item name="frontend_input" xsi:type="string">text</item>
+                    <item name="source_model" xsi:type="string">Eriocnemis\DirectoryImportExport\Model\Export\Region\Attribute\Source\Locale</item>
+                </item>
+                <item name="code" xsi:type="array">
+                    <item name="frontend_label" xsi:type="string">Region Code</item>
+                    <item name="backend_type" xsi:type="string">varchar</item>
+                    <item name="frontend_input" xsi:type="string">text</item>
+                </item>
+                <item name="name" xsi:type="array">
+                    <item name="frontend_label" xsi:type="string">Region Name</item>
+                    <item name="backend_type" xsi:type="string">varchar</item>
+                    <item name="frontend_input" xsi:type="string">text</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
 </config>

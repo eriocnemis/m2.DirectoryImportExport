@@ -5,7 +5,7 @@
  */
 namespace Eriocnemis\DirectoryImportExport\Model\Import\Region\Validator;
 
-use Eriocnemis\Directory\Model\Config\Source\Status as StatusSource;
+use Magento\Config\Model\Config\Source\Enabledisable as StatusSource;
 use Eriocnemis\DirectoryImportExport\Model\Constant\Field;
 use Eriocnemis\DirectoryImportExport\Model\Import\Validator\ValidatorInterface;
 
